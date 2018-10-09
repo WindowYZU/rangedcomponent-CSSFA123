@@ -14,6 +14,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ProgressMonitor;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.WindowConstants;
 
 /**
@@ -35,7 +36,9 @@ public class JScrollPane1 {
         JScrollPane scrollPane=new JScrollPane();
         scrollPane.getViewport().add(textArea);
         //試試看將 textArea 或 scrollPane 加入 frame 的區別
-        
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        frame.add(scrollPane);
         ///////////////////////////////////////////////
         frame.setVisible(true);
     }
